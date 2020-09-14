@@ -1,0 +1,31 @@
+{
+  "name": "schedyall",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "next build",
+    "dev": "next"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacobtt21/schedyall.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacobtt21/schedyall/issues"
+  },
+  "homepage": "https://github.com/jacobtt21/schedyall#readme",
+  "dependencies": {
+    "faunadb": "^3.0.1",
+    "graphql": "^15.3.0",
+    "graphql-request": "^3.1.0",
+    "next": "^9.5.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-hook-form": "^6.8.2",
+    "swr": "^0.3.2"
+  }
+}
