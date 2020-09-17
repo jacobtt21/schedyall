@@ -69,16 +69,16 @@ const Home = ({ token }) => {
   if (error)
     return (
       <Layout>
-        <div>failed to load</div>
+        <h1>Welcome to Schedyall! login to get started!</h1>
       </Layout>
     );
 
   return (
     <Layout>
-      <h1>Next Fauna GraphQL CRUD</h1>
+      <h1>Your Schedule!</h1>
 
       <Link href="/new">
-        <a>Create New Todo</a>
+        <a>Add to your to-do list:</a>
       </Link>
 
       {data ? (

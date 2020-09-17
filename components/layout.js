@@ -5,7 +5,7 @@ import Header from "../components/header";
 const Layout = ({ children }) => (
   <>
     <Head>
-      <title>Next Fauna Auth</title>
+      <title>Schedyall</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
