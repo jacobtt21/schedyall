@@ -1,5 +1,9 @@
 .container {
-  max-width: 40rem;
-  margin: 1.5rem auto;
-  padding: 0 1rem;
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#11e7db, #911ade);
 }
