@@ -44,7 +44,6 @@ const Signup = () => {
           <input
             type="email"
             name="email"
-            placeholder="e.g. john@example.com"
             ref={register({ required: "Email is required" })}
           />
           {errors.email && (
@@ -59,7 +58,6 @@ const Signup = () => {
           <input
             type="password"
             name="password"
-            placeholder="e.g. John-1234"
             ref={register({ required: "Password is required" })}
           />
           {errors.password && (
@@ -74,7 +72,6 @@ const Signup = () => {
           <input
             type="password"
             name="password2"
-            placeholder="e.g. John-1234"
             ref={register({
               validate: (value) =>
                 value === watch("password") || "Passwords do not match",
