@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
-import Layout from "../components/layout";
+import Layout from "../components/layout2";
 import utilStyles from "../styles/utils.module.css";
+import Layout2 from "../components/layout2";
 
 const Login = () => {
   const router = useRouter();
@@ -35,15 +36,15 @@ const Login = () => {
   });
 
   return (
-    <Layout>
+    <Layout2>
       <h1>Log In</h1>
 
       <form onSubmit={onSubmit} className={utilStyles.form}>
         <div>
-          <label>Email</label>
           <input
             type="email"
             name="email"
+            placeholder="Email"
             ref={register({ required: "Email is required" })}
           />
           {errors.email && (
@@ -54,10 +55,10 @@ const Login = () => {
         </div>
 
         <div>
-          <label>Password</label>
           <input
             type="password"
             name="password"
+            placeholder="Password"
             ref={register({ required: "Password is required" })}
           />
           {errors.password && (
@@ -77,7 +78,7 @@ const Login = () => {
           {errorMessage}
         </p>
       )}
-    </Layout>
+    </Layout2>
   );
 };
 

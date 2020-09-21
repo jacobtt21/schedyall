@@ -84,24 +84,24 @@ const Home = ({ token }) => {
           </p>
 
           <div className="grid">
-            <a href="#" className="card">
+            <a href="/login" className="card">
               <h3>Schedule &rarr;</h3>
               <p>Save and build your schedule to be accessed from anywhere.</p>
             </a>
 
-            <a href="#" className="card">
+            <a href="/login" className="card">
               <h3>To do list &rarr;</h3>
               <p>Create to do lists and prioritize what needs to be done.</p>
             </a>
 
-            <a href="#" className="card">
+            <a href="/login" className="card">
               <h3>Groups &rarr;</h3>
               <p>
                 Have meetings or study with friends, classmates, or anyone else.
               </p>
             </a>
 
-            <a href="#" className="card">
+            <a href="/login" className="card">
               <h3>Doc share &rarr;</h3>
               <p>Share documents between others to easy access.</p>
             </a>
