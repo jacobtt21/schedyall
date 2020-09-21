@@ -22,10 +22,6 @@ const Header = () => {
     <div className={styles.header}>
       <header>
         <nav>
-          <Link href="/">
-            <a>Home</a>
-          </Link>
-
           <ul>
             {user ? (
               <>
