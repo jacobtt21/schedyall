@@ -24,14 +24,16 @@ const Header = () => {
           <ul>
             {user ? (
               <>
-                <li>
+                <div className="btns">
+                  <button onClick={logout}>
+                    <b>Logout</b>
+                  </button>
+                </div>
+                <div className="btns">
                   <Link href="/profile">
                     <a>{user.email}</a>
                   </Link>
-                </li>
-                <li>
-                  <button onClick={logout}>Logout</button>
-                </li>
+                </div>
               </>
             ) : (
               <>
@@ -48,7 +50,7 @@ const Header = () => {
                       </a>
                     </Link>
                   </div>
-                  <div className="btn">
+                  <div className="btns">
                     <Link href="/signup">
                       <a>
                         <b>Sign Up</b>
@@ -84,27 +86,18 @@ const Header = () => {
             float: right;
             margin-right: 3%;
           }
-          .btn {
-            border: 1px solid #232b2b;
-            border-radius: 10px;
-            transition: color 0.15s ease, border-color 0.15s ease;
-            padding: 1rem;
-            float: right;
-            margin-right: 2%;
-            color: inherit;
-            text-decoration: none;
-          }
-          .btn:hover,
-          .btn:focus,
-          .btn:active {
-            color: #eaeaea;
-            border-color: #eaeaea;
-          }
           .btns:hover,
           .btns:focus,
           .btns:active {
             color: #eaeaea;
             border-color: #eaeaea;
+          }
+          button {
+            font-size: inherit;
+            font-family: inherit;
+            border: 0;
+            padding: 0;
+            background: none;
           }
         `}
       </style>
