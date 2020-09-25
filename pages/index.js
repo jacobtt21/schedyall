@@ -241,6 +241,7 @@ const Home = ({ token }) => {
   return (
     <Layout>
       <h1>Your Schedule!</h1>
+      <h3>More features coming soon!</h3>
 
       <Link href="/new">
         <a>Add to your to-do list:</a>
