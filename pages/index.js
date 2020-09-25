@@ -243,7 +243,7 @@ const Home = ({ token }) => {
       <h1>Your Schedule!</h1>
       <h3>More features coming soon!</h3>
 
-      <Link href="/new">
+      <Link href="/new" color="black">
         <a>Add to your to-do list:</a>
       </Link>
 
@@ -278,6 +278,11 @@ const Home = ({ token }) => {
       ) : (
         <div>loading...</div>
       )}
+      <style jsx>{`
+        a {
+          color: black;
+        }
+      `}</style>
     </Layout>
   );
 };
