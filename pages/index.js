@@ -243,8 +243,8 @@ const Home = ({ token }) => {
       <h1>Your Schedule!</h1>
       <h3>More features coming soon!</h3>
 
-      <Link href="/new" color="black">
-        <a>Add to your to-do list:</a>
+      <Link href="/new">
+        <a>Add to your list &rarr;</a>
       </Link>
 
       {data ? (

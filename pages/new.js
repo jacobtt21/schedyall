@@ -9,6 +9,7 @@ import Layout from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
 import { graphQLClient } from "../utils/graphql-client";
 import { getAuthCookie } from "../utils/auth-cookies";
+import Link from "next/link";
 
 const New = ({ token }) => {
   const router = useRouter();
@@ -53,6 +54,9 @@ const New = ({ token }) => {
   return (
     <Layout>
       <h1>Create New Todo</h1>
+      <Link href="/">
+        <a>&larr; Just kidding? Go back</a>
+      </Link>
 
       <form onSubmit={onSubmit} className={utilStyles.form}>
         <div>
@@ -60,7 +64,7 @@ const New = ({ token }) => {
           <input
             type="text"
             name="task"
-            placeholder="e.g. do something"
+            placeholder="Change the world..."
             ref={register({ required: "Task is required" })}
           />
           {errors.task && (
@@ -80,6 +84,14 @@ const New = ({ token }) => {
           {errorMessage}
         </p>
       )}
+      <style jsx>{`
+        a {
+          color: black;
+        }
+        form {
+          margin-top: 0.7rem;
+        }
+      `}</style>
     </Layout>
   );
 };
