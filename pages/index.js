@@ -410,9 +410,9 @@ const Home = ({ token }) => {
           )}
         </div>
         <div className="column">
-          <h4>SATURDAY/SUNDAY</h4>
+          <h4>THE WEEKEND</h4>
           <Link href="/new-week/new-Saturday">
-            <a>Add to Saturday &rarr;</a>
+            <a>Add to the Weekend &rarr;</a>
           </Link>
           {data ? (
             <ol>
