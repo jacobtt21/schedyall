@@ -21,6 +21,48 @@ const Home = ({ token }) => {
             completed
           }
         }
+        allMondays {
+          data {
+            _id
+            event
+          }
+        }
+        allTuesdays {
+          data {
+            _id
+            event
+          }
+        }
+        allWednesdays {
+          data {
+            _id
+            event
+          }
+        }
+        allThursdays {
+          data {
+            _id
+            event
+          }
+        }
+        allFridays {
+          data {
+            _id
+            event
+          }
+        }
+        allSaturdays {
+          data {
+            _id
+            event
+          }
+        }
+        allSundays {
+          data {
+            _id
+            event
+          }
+        }
       }
     `,
     fetcher
@@ -240,8 +282,160 @@ const Home = ({ token }) => {
 
   return (
     <Layout>
-      <h1>Your Schedule!</h1>
-      <h3>More features coming soon!</h3>
+      <h2>Your Schedule!</h2>
+      <div className="row">
+        <div className="column">
+          <h4>MONDAY</h4>
+          <Link href="/new-week/new-Monday">
+            <a>Add to Monday &rarr;</a>
+          </Link>
+          {data ? (
+            <ol>
+              {data.allMondays.data.map((mon) => (
+                <li key={mon._id} className={styles.todo}>
+                  <span>{mon.event}</span>
+                  <span className={styles.edit}>
+                    <Link
+                      href="/week/monday/[id]"
+                      as={`/week/monday/${mon._id}`}
+                    >
+                      <a>Edit</a>
+                    </Link>
+                  </span>
+                </li>
+              ))}
+            </ol>
+          ) : (
+            <div>loading...</div>
+          )}
+        </div>
+        <div className="column">
+          <h4>TUESDAY</h4>
+          <Link href="/new-week/new-Tuesday">
+            <a>Add to Tuesday &rarr;</a>
+          </Link>
+          {data ? (
+            <ol>
+              {data.allTuesdays.data.map((tue) => (
+                <li key={tue._id} className={styles.todo}>
+                  <span>{tue.event}</span>
+                  <span className={styles.edit}>
+                    <Link
+                      href="/week/tuesday/[id]"
+                      as={`/week/tuesday/${tue._id}`}
+                    >
+                      <a>Edit</a>
+                    </Link>
+                  </span>
+                </li>
+              ))}
+            </ol>
+          ) : (
+            <div>loading...</div>
+          )}
+        </div>
+        <div className="column">
+          <h4>WEDNESDAY</h4>
+          <Link href="/new-week/new-Wednesday">
+            <a>Add to Wednesday &rarr;</a>
+          </Link>
+          {data ? (
+            <ol>
+              {data.allWednesdays.data.map((wed) => (
+                <li key={wed._id} className={styles.todo}>
+                  <span>{wed.event}</span>
+                  <span className={styles.edit}>
+                    <Link
+                      href="/week/wednesday/[id]"
+                      as={`/week/wednesday/${wed._id}`}
+                    >
+                      <a>Edit</a>
+                    </Link>
+                  </span>
+                </li>
+              ))}
+            </ol>
+          ) : (
+            <div>loading...</div>
+          )}
+        </div>
+        <div className="column">
+          <h4>THURSDAY</h4>
+          <Link href="/new-week/new-Thursday">
+            <a>Add to Thursday &rarr;</a>
+          </Link>
+          {data ? (
+            <ol>
+              {data.allThursdays.data.map((thur) => (
+                <li key={thur._id} className={styles.todo}>
+                  <span>{thur.event}</span>
+                  <span className={styles.edit}>
+                    <Link
+                      href="/week/thursday/[id]"
+                      as={`/week/thursday/${thur._id}`}
+                    >
+                      <a>Edit</a>
+                    </Link>
+                  </span>
+                </li>
+              ))}
+            </ol>
+          ) : (
+            <div>loading...</div>
+          )}
+        </div>
+        <div className="column">
+          <h4>FRIDAY</h4>
+          <Link href="/new-week/new-Friday">
+            <a>Add to Friday &rarr;</a>
+          </Link>
+          {data ? (
+            <ol>
+              {data.allFridays.data.map((fri) => (
+                <li key={fri._id} className={styles.todo}>
+                  <span>{fri.event}</span>
+                  <span className={styles.edit}>
+                    <Link
+                      href="/week/friday/[id]"
+                      as={`/week/friday/${fri._id}`}
+                    >
+                      <a>Edit</a>
+                    </Link>
+                  </span>
+                </li>
+              ))}
+            </ol>
+          ) : (
+            <div>loading...</div>
+          )}
+        </div>
+        <div className="column">
+          <h4>SATURDAY/SUNDAY</h4>
+          <Link href="/new-week/new-Saturday">
+            <a>Add to Saturday &rarr;</a>
+          </Link>
+          {data ? (
+            <ol>
+              {data.allSaturdays.data.map((sat) => (
+                <li key={sat._id} className={styles.todo}>
+                  <span>{sat.event}</span>
+                  <span className={styles.edit}>
+                    <Link
+                      href="/week/saturday/[id]"
+                      as={`/week/saturday/${sat._id}`}
+                    >
+                      <a>Edit</a>
+                    </Link>
+                  </span>
+                </li>
+              ))}
+            </ol>
+          ) : (
+            <div>loading...</div>
+          )}
+        </div>
+      </div>
+      <h2>Your To-do list</h2>
 
       <Link href="/new">
         <a>Add to your list &rarr;</a>
@@ -281,6 +475,19 @@ const Home = ({ token }) => {
       <style jsx>{`
         a {
           color: black;
+        }
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        .column {
+          float: left;
+          padding: 10px;
+          text-align: center;
+          background-color: white;
+          margin: 0.1rem;
+          border-radius: 10%;
         }
       `}</style>
     </Layout>
