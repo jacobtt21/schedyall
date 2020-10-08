@@ -61,7 +61,7 @@ const NewSaturday = ({ token }) => {
           <input
             type="text"
             name="event"
-            placeholder="Change the world..."
+            placeholder="12:00 - Math"
             ref={register({ required: "Event is required" })}
           />
           {errors.task && (

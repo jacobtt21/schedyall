@@ -435,7 +435,7 @@ const Home = ({ token }) => {
           )}
         </div>
       </div>
-      <h2>Your To-do list</h2>
+      <h2>Your To-do list!</h2>
 
       <Link href="/new">
         <a>Add to your list &rarr;</a>
