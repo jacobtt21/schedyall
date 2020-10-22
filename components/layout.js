@@ -1,6 +1,6 @@
 import Head from "next/head";
-import styles from "./layout.module.css";
 import Header from "../components/header";
+import styles from "./layout.module.css";
 
 const Layout = ({ children }) => (
   <>
@@ -8,12 +8,10 @@ const Layout = ({ children }) => (
       <title>Schedyall</title>
       <link rel="icon" href="/favicon.JPG" />
     </Head>
-
     <Header />
 
-    <main>
-      <div className={styles.container}>{children}</div>
-    </main>
+
+    <div className={styles.container}>{children}</div>
   </>
 );
 

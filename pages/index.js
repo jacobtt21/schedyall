@@ -7,6 +7,7 @@ import Layout from "../components/layout";
 import styles from "../styles/Home.module.css";
 import { graphQLClient } from "../utils/graphql-client";
 import { getAuthCookie } from "../utils/auth-cookies";
+import { motion } from "framer-motion"
 
 const Home = ({ token }) => {
   const fetcher = async (query) => await graphQLClient(token).request(query);
@@ -114,41 +115,86 @@ const Home = ({ token }) => {
     return (
       <Layout>
         <main>
-          <h1 className="title">
-            Let's{" "}
-            <Link href="../login">
-              <a>get to WORK!</a>
-            </Link>
-          </h1>
-
-          <p className="description">
-            Let Schedyall help you by giving you a tool to manage your busy
-            schedules, plan study or work sessions, build to do lists, and share
-            documents with others!
-          </p>
-
-          <div className="grid">
-            <a href="/login" className="card">
-              <h3>Schedule &rarr;</h3>
-              <p>Save and build your schedule to be accessed from anywhere.</p>
-            </a>
-
-            <a href="/login" className="card">
-              <h3>To do list &rarr;</h3>
-              <p>Create to do lists and prioritize what needs to be done.</p>
-            </a>
-
-            <a href="/login" className="card">
-              <h3>Groups &rarr;</h3>
-              <p>
-                Have meetings or study with friends, classmates, or anyone else.
-              </p>
-            </a>
-
-            <a href="/login" className="card">
-              <h3>Doc share &rarr;</h3>
-              <p>Share documents between others to easy access.</p>
-            </a>
+          <motion.div initial="hidden" animate="visible" variants={{
+            hidden: {
+            scale: .8,
+            opacity: 0
+            },
+            visible: {
+            scale: 1,
+            opacity: 1,
+            transition: {
+              delay: .6
+            }
+          },
+          }}>
+            <div className="title">
+              <div className="row">
+              <div className="words">
+                  <h1>The smarter way
+                  to plan your day</h1>
+                  </div>
+                <div className="words">
+            <img src="/BLACK.JPG"/>
+              </div>
+            </div>
+            </div>
+          </motion.div>
+          <div className="Personal">
+            <div className="words">
+              <h3>Schedyall For you</h3>
+              <p>With Schedyall, you can plan your days with ease and help get yourself organized for everything to come.</p>
+            </div>
+            <div className="words">
+              <div className="sched">
+              <h4>MONDAY</h4>
+            <a>Add to Monday &rarr;</a>
+            <ol>
+                <li className={styles.todo}>
+                  <span>Read Assignment</span>
+                  <span className={styles.edit}>
+                      <a>Edit</a>
+                  </span>
+                  </li>
+                  <li className={styles.todo}>
+                  <span>Dinner with John</span>
+                  <span className={styles.edit}>
+                      <a>Edit</a>
+                  </span>
+                </li>
+            </ol>
+              </div>
+              <div className="sched">
+              <h4>TUESDAY</h4>
+            <a>Add to Tuesday &rarr;</a>
+            <ol>
+                <li className={styles.todo}>
+                  <span>Math @ 12</span>
+                  <span className={styles.edit}>
+                      <a>Edit</a>
+                  </span>
+                </li>
+                <li className={styles.todo}>
+                  <span>English Due tonight!</span>
+                  <span className={styles.edit}>
+                      <a>Edit</a>
+                  </span>
+                  </li>
+                  <li className={styles.todo}>
+                  <span>Meeting with Chris</span>
+                  <span className={styles.edit}>
+                      <a>Edit</a>
+                  </span>
+                </li>
+            </ol>
+              </div>
+            </div>
+          </div>
+          <div className="Business">
+            <div className="words">
+              <h3>Schedyall For Buiness</h3>
+              <p>With so many features, Schedyall can help you organize appointments, track logistics, add to team schedules, and so much more.</p>
+            </div>
           </div>
         </main>
 
@@ -166,6 +212,8 @@ const Home = ({ token }) => {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            margin: auto;
+            width: 100%;
           }
 
           footer {
@@ -191,79 +239,45 @@ const Home = ({ token }) => {
             color: #232b2b;
             text-decoration: none;
           }
-
-          .title a {
-            color: #eaeaea;
-            text-decoration: none;
-            background-image: linear-gradient(currentColor, currentColor);
-            background-position: 0% 100%;
-            background-repeat: no-repeat;
-            background-size: 0% 2px;
-            transition: background-size 0.3s;
-          }
-
-          .title a:hover,
-          a:focus {
-            background-size: 100% 2px;
-          }
-
           .title {
-            margin: 0;
+            margin-bottom: 2%;
             line-height: 1.15;
-            font-size: 4rem;
-          }
-
-          .title,
-          .description {
+            font-size: 2.5rem;
             text-align: center;
-          }
-
-          .description {
-            line-height: 1.5;
-            width: 70%;
-            font-size: 1.5rem;
-          }
-
-          .grid {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-
-            max-width: 800px;
-            margin-top: 3rem;
-          }
-
-          .card {
-            margin: 1rem;
-            flex-basis: 45%;
-            padding: 1.5rem;
-            text-align: left;
-            color: inherit;
-            text-decoration: none;
-            border: 1px solid #232b2b;
+            background: none;
             border-radius: 10px;
-            transition: color 0.15s ease, border-color 0.15s ease;
+            padding: 5%;
+            width: 95%;
+            height: 100vh;
+
           }
 
-          .card:hover,
-          .card:focus,
-          .card:active {
-            color: #eaeaea;
-            border-color: #eaeaea;
+          h1 {
+            margin-bottom: 0;
           }
 
-          .card h3 {
-            margin: 0 0 1rem 0;
-            font-size: 1.5rem;
-            animation: bounce; /* referring directly to the animation's @keyframe declaration */
-            animation-duration: 2s; /* don't forget to set a duration! */
+          .Personal {
+            margin-bottom: 2%;
+            line-height: 1.15;
+            font-size: 2.5rem;
+            text-align: center;
+            background: linear-gradient(#89fffd, #ef32d9);
+            border-radius: 10px;
+            padding: 5%;
+            width: 95%;
+            color: white;
           }
 
-          .card p {
-            margin: 0;
-            font-size: 1.25rem;
-            line-height: 1.5;
+          .Business {
+            margin-bottom: 2%;
+            line-height: 1.15;
+            font-size: 2.5rem;
+            text-align: center;
+            background: linear-gradient(#FC5C7D, #6A82FB);
+            border-radius: 10px;
+            padding: 5%;
+            width: 95%;
+            color: white;
           }
 
           .logo {
@@ -276,13 +290,37 @@ const Home = ({ token }) => {
               flex-direction: column;
             }
           }
+          .row:after {
+            content: "";
+            display: table;
+            clear: both;
+          }
+          .words{
+            float: left;
+            width: 50%;
+            padding: 10px;
+            text-align: left;
+          }
+          .sched {
+            float: left;
+            text-align: center;
+            font-size: 40%;
+            color: black;
+            background:white;
+            padding: 5px;
+            border-radius: 10px;
+            margin:auto;
+          }
         `}</style>
       </Layout>
     );
 
   return (
     <Layout>
-      <h2>Your Schedule!</h2>
+      <main>
+      <div className="add">
+        &larr; Edit Week &rarr;
+      </div>
       <div className="row">
         <div className="column">
           <h4>MONDAY</h4>
@@ -435,62 +473,61 @@ const Home = ({ token }) => {
           )}
         </div>
       </div>
-      <h2>Your To-do list!</h2>
-
-      <Link href="/new">
-        <a>Add to your list &rarr;</a>
-      </Link>
-
-      {data ? (
-        <ul>
-          {data.allTodos.data.map((todo) => (
-            <li key={todo._id} className={styles.todo}>
-              <span
-                onClick={() => toggleTodo(todo._id, todo.completed)}
-                style={
-                  todo.completed
-                    ? { textDecorationLine: "line-through" }
-                    : { textDecorationLine: "none" }
-                }
-              >
-                {todo.task}
-              </span>
-              <span className={styles.edit}>
-                <Link href="/todo/[id]" as={`/todo/${todo._id}`}>
-                  <a>Edit</a>
-                </Link>
-              </span>
-              <span
-                onClick={() => deleteATodo(todo._id)}
-                className={styles.delete}
-              >
-                Delete
-              </span>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <div>loading...</div>
-      )}
-      <style jsx>{`
-        a {
-          color: black;
-        }
-        .row:after {
+        </main>
+        <style jsx>{`
+          main {
+            padding: 5rem 0;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1.5rem;;
+          }
+          a {
+            color: #232b2b;
+            text-decoration: none;
+          }
+          .row:after {
           content: "";
           display: table;
           clear: both;
         }
         .column {
           float: left;
-          padding: 10px;
           text-align: center;
-          background-color: white;
-          margin: 0.1rem;
-          border-radius: 10%;
+          font-size: 80%;
         }
-      `}</style>
-    </Layout>
+        .add{
+          margin-bottom: 2rem;
+          padding: 1rem;
+            float: right;
+            margin-right: 3%;
+            font-size: inherit;
+            font-family: inherit;
+            border: 0;
+            padding: 0;
+            background: none;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+        }
+        .add:hover,
+          .btns:focus,
+          .btns:active {
+            border-radius: 10px;
+            background-color: #CBCBCB;
+            padding: 10px;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+          }
+          @media (max-width: 600px) {
+            .row {
+              width: 100%;
+              flex-direction: column;
+            }
+          }
+        `}</style>
+      </Layout>
   );
 };
 

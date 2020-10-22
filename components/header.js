@@ -30,8 +30,23 @@ const Header = () => {
                   </button>
                 </div>
                 <div className="btns">
-                  <Link href="/profile">
+                  <Link href="/soon">
                     <a>{user.email}</a>
+                  </Link>
+                </div>
+                <div className="btns">
+                  <Link href="/soon">
+                    <a>To-do Lists</a>
+                  </Link>
+                </div>
+                <div className="btns">
+                  <Link href="/soon">
+                    <a>Groups</a>
+                  </Link>
+                </div>
+                <div className="btns">
+                  <Link href="/">
+                    <a>Schedule</a>
                   </Link>
                 </div>
               </>
@@ -40,7 +55,21 @@ const Header = () => {
                 <div className="row">
                   <div className="logo">
                     <Link href="/">
-                      <a>Schedyall</a>
+                      <a>Schedyall BETA</a>
+                    </Link>
+                    </div>
+                    <div className="btnss">
+                    <Link href="/jobs">
+                      <a>
+                        <b>Company</b>
+                      </a>
+                    </Link>
+                    </div>
+                    <div className="btnss">
+                    <Link href="/soon">
+                      <a>
+                        <b>Blog</b>
+                      </a>
                     </Link>
                   </div>
                   <div className="btns">
@@ -66,9 +95,10 @@ const Header = () => {
       <style jsx>
         {`
           .div {
+            margin-top: 25px;
             background-color: none;
-            position: fixed;
             width: 100%;
+            position: absolute;
           }
           a {
             color: black;
@@ -79,25 +109,55 @@ const Header = () => {
             margin-left: 0%;
           }
           .btns {
-            border: 1px solid #232b2b;
-            border-radius: 10px;
-            transition: color 0.15s ease, border-color 0.15s ease;
             padding: 1rem;
             float: right;
             margin-right: 3%;
-          }
-          .btns:hover,
-          .btns:focus,
-          .btns:active {
-            color: #eaeaea;
-            border-color: #eaeaea;
-          }
-          button {
             font-size: inherit;
             font-family: inherit;
             border: 0;
             padding: 0;
             background: none;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+          }
+          .btnss {
+            padding: 1rem;
+            float: left;
+            margin-left: 3%;
+            font-size: inherit;
+            font-family: inherit;
+            border: 0;
+            padding: 0;
+            background: none;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+          }
+          button {
+            background-color: inherit;
+            border: none;
+            border-radius: 10px;
+            color: black;
+            font-size: inherit;
+            font-family: inherit;
+            padding: 1px;
+          }
+          .btns:hover,
+          .btns:focus,
+          .btns:active {
+            border-radius: 10px;
+            background-color: #CBCBCB;
+            padding: 10px;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+          }
+          .btnss:hover,
+          .btnss:focus,
+          .btnss:active {
+            border-radius: 10px;
+            background-color: #CBCBCB;
+            padding: 10px;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
           }
         `}
       </style>
