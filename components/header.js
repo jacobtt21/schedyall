@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import useSWR from "swr";
+import { motion } from 'framer-motion';
 
 const Header = () => {
   const router = useRouter();
@@ -24,15 +25,15 @@ const Header = () => {
           <ul>
             {user ? (
               <>
+                <div className="btnss">
+                  <Link href="/soon">
+                    <a>{user.email}</a>
+                  </Link>
+                </div>
                 <div className="btns">
                   <button onClick={logout}>
                     <b>Logout</b>
                   </button>
-                </div>
-                <div className="btns">
-                  <Link href="/soon">
-                    <a>{user.email}</a>
-                  </Link>
                 </div>
                 <div className="btns">
                   <Link href="/soon">

@@ -141,11 +141,7 @@ const Home = ({ token }) => {
             </div>
           </motion.div>
           <div className="Personal">
-            <div className="words">
-              <h3>Schedyall For you</h3>
-              <p>With Schedyall, you can plan your days with ease and help get yourself organized for everything to come.</p>
-            </div>
-            <div className="words">
+          <div className="words">
               <div className="sched">
               <h4>MONDAY</h4>
             <a>Add to Monday &rarr;</a>
@@ -188,6 +184,10 @@ const Home = ({ token }) => {
                 </li>
             </ol>
               </div>
+            </div>
+            <div className="words">
+              <h3>Schedyall For you</h3>
+              <p>With Schedyall, you can plan your days with ease and help get yourself organized for everything to come.</p>
             </div>
           </div>
           <div className="Business">
@@ -248,7 +248,7 @@ const Home = ({ token }) => {
             border-radius: 10px;
             padding: 5%;
             width: 95%;
-            height: 100vh;
+            height: 50vh;
 
           }
 
@@ -299,7 +299,7 @@ const Home = ({ token }) => {
             float: left;
             width: 50%;
             padding: 10px;
-            text-align: left;
+            text-align: center;
           }
           .sched {
             float: left;
