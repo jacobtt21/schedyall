@@ -36,7 +36,7 @@ const Header = () => {
                   </button>
                 </div>
                 <div className="btns">
-                  <Link href="/soon">
+                  <Link href="/todo">
                     <a>To-do Lists</a>
                   </Link>
                 </div>
