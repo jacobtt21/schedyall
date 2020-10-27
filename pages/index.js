@@ -80,16 +80,10 @@ const Home = ({ token }) => {
           },
           }}>
             <div className="title">
-              <div className="row">
-              <div className="words">
                   <h1>The smarter way
                   to plan your day</h1>
+                  <img src="/BLACK.jpg"/>
                   </div>
-                <div className="words">
-            <img src="/BLACK.JPG"/>
-              </div>
-            </div>
-            </div>
           </motion.div>
           <div className="Personal">
           <div className="words">
@@ -200,7 +194,7 @@ const Home = ({ token }) => {
             padding: 5%;
             width: 95%;
             height: 50vh;
-
+            margin-bottom: 15rem;;
           }
 
           h1 {
@@ -229,6 +223,10 @@ const Home = ({ token }) => {
             padding: 5%;
             width: 95%;
             color: white;
+          }
+          
+          img {
+            text-align: center;
           }
 
           .logo {
