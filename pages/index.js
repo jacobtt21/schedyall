@@ -80,10 +80,10 @@ const Home = ({ token }) => {
           },
           }}>
             <div className="title">
+            <img src="/asd.png" />
                   <h1>The smarter way
                   to plan your day</h1>
               <br />
-              <img src="/asd.png" />
               <br />
                   </div>
           </motion.div>
