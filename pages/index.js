@@ -136,10 +136,8 @@ const Home = ({ token }) => {
             </div>
           </div>
           <div className="Business">
-            <div className="words">
-              <h3>Schedyall For Buiness</h3>
-              <p>With so many features, Schedyall can help you organize appointments, track logistics, add to team schedules, and so much more.</p>
-            </div>
+              <img src="/X.png"/>
+              <p>Use the technology behind the Iodefi intergrated with Schedyall to help you track logisitics, employees, order, and so much more.</p>
           </div>
         </main>
 
