@@ -82,7 +82,7 @@ const Home = ({ token }) => {
             <div className="title">
                   <h1>The smarter way
                   to plan your day</h1>
-                  <img src="/BLACK.jpg"/>
+                  <img src="/Black.JPG"/>
                   </div>
           </motion.div>
           <div className="Personal">
