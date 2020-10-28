@@ -82,23 +82,52 @@ const Home = ({ token }) => {
             <div className="title">
                   <h1>The smarter way
                   to plan your day</h1>
-                  <img src="/Black.JPG"/>
+              <br />
+              <img src="/asd.png" />
+              <br />
                   </div>
           </motion.div>
+          <br />
           <div className="Personal">
-          <div className="words">
-              <div className="sched">
+            <div className="words1">
+            <div className="add">
+            <h2>Schedules &rarr;</h2>
+            </div>
+              <p>Save and build your schedule to be accessed from anywhere.</p>
+              <div className="add">
+            <h2>To do Lists &rarr;</h2>
+            </div>
+              <p>Create to do lists and prioritize what needs to be done.</p>
+              <div className="add">
+            <h2>Groups &rarr;</h2>
+            </div>
+              <p>
+                Have meetings or study with friends, classmates, or anyone else.
+              </p>
+              </div>
+            <div className="words2">
+              <h3>Schedyall For you</h3>
+              <p>With Schedyall, you can plan your days with ease and help get yourself organized for everything to come.</p>
+            </div>
+            <div className="schedules">
+            <div className="sched">
               <h4>MONDAY</h4>
             <a>Add to Monday &rarr;</a>
             <ol>
                 <li className={styles.todo}>
-                  <span>Read Assignment</span>
+                  <span>Spanish @ 7:00</span>
                   <span className={styles.edit}>
                       <a>Edit</a>
                   </span>
                   </li>
                   <li className={styles.todo}>
-                  <span>Dinner with John</span>
+                  <span>Math @ 12:00</span>
+                  <span className={styles.edit}>
+                      <a>Edit</a>
+                  </span>
+                  </li>
+                  <li className={styles.todo}>
+                  <span>Chemistry @ 3:00</span>
                   <span className={styles.edit}>
                       <a>Edit</a>
                   </span>
@@ -110,7 +139,30 @@ const Home = ({ token }) => {
             <a>Add to Tuesday &rarr;</a>
             <ol>
                 <li className={styles.todo}>
-                  <span>Math @ 12</span>
+                  <span>Math @ 12:00</span>
+                  <span className={styles.edit}>
+                      <a>Edit</a>
+                  </span>
+                </li>
+                <li className={styles.todo}>
+                  <span>English @ 3:00</span>
+                  <span className={styles.edit}>
+                      <a>Edit</a>
+                  </span>
+                  </li>
+            </ol>
+              </div>
+              <div className="sched">
+              <h4>JACOB'S TODO LIST</h4>
+            <a>Add to your Todo List &rarr;</a>
+            <li className={styles.todo}>
+                  <span>Call Mom :)</span>
+                  <span className={styles.edit}>
+                      <a>Edit</a>
+                  </span>
+                </li>
+                <li className={styles.todo}>
+                  <span><strike>Math Homework due tommorrow!</strike></span>
                   <span className={styles.edit}>
                       <a>Edit</a>
                   </span>
@@ -120,24 +172,34 @@ const Home = ({ token }) => {
                   <span className={styles.edit}>
                       <a>Edit</a>
                   </span>
-                  </li>
-                  <li className={styles.todo}>
-                  <span>Meeting with Chris</span>
+                </li>
+                <li className={styles.todo}>
+                  <span>Read Chemistry textbook</span>
                   <span className={styles.edit}>
                       <a>Edit</a>
                   </span>
                 </li>
-            </ol>
               </div>
-            </div>
-            <div className="words">
-              <h3>Schedyall For you</h3>
-              <p>With Schedyall, you can plan your days with ease and help get yourself organized for everything to come.</p>
+              <div className="sched">
+              <h4>JACOB'S GROUPS</h4>
+            <li className={styles.todo}>
+                  <span><a>MATH STUDY GROUP &rarr;</a></span>
+                </li>
+                <li className={styles.todo}>
+                  <span><a>WORK &rarr;</a></span>
+                </li>
+                <li className={styles.todo}>
+                  <span><a>FAMILY &rarr;</a></span>
+                </li>
+              </div>
             </div>
           </div>
           <div className="Business">
               <img src="/X.png"/>
-              <p>Use the technology behind the Iodefi intergrated with Schedyall to help you track logisitics, employees, order, and so much more.</p>
+            <p>Use the technology behind Iodefi intergrated with Schedyall to help you track logisitics, employees, order, and so much more.</p>
+            <div className="add">
+            <b>Learn more Here</b>
+            </div>
           </div>
         </main>
 
@@ -159,6 +221,29 @@ const Home = ({ token }) => {
             width: 100%;
           }
 
+          .add{
+            margin-bottom: 2rem;
+            padding: 1rem;
+            float: center;
+            font-size: 80%;
+            font-family: inherit;
+            border: 0;
+            padding: 0;
+            background: none;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+          }
+
+          .add:hover,
+          .btns:focus,
+          .btns:active {
+            border-radius: 10px;
+            background-color: #CBCBCB;
+            padding: 10px;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+          }
+
           footer {
             width: 100%;
             height: 100px;
@@ -166,6 +251,13 @@ const Home = ({ token }) => {
             display: flex;
             justify-content: center;
             align-items: center;
+          }
+
+          .schedules{
+            content: "";
+            display: table;
+            clear: both;
+            width: 100%;
           }
 
           footer img {
@@ -201,10 +293,10 @@ const Home = ({ token }) => {
 
           .Personal {
             margin-bottom: 2%;
+            font-size: 1.5rem;
             line-height: 1.15;
-            font-size: 2.5rem;
             text-align: center;
-            background: linear-gradient(#89fffd, #ef32d9);
+            background: linear-gradient(#6A82FB, #FC5C7D);
             border-radius: 10px;
             padding: 5%;
             width: 95%;
@@ -248,15 +340,31 @@ const Home = ({ token }) => {
             padding: 10px;
             text-align: center;
           }
+          .words1{
+            float: left;
+            width: 50%;
+            padding: 10px;
+            text-align: center;
+          }
+          .words2{
+            float: left;
+            width: 50%;
+            padding: 10px;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 8rem;
+          }
+
           .sched {
             float: left;
             text-align: center;
-            font-size: 40%;
+            font-size: 70%;
             color: black;
             background:white;
             padding: 5px;
             border-radius: 10px;
-            margin:auto;
+            width: 24.6%;
+            margin:2px;
           }
         `}</style>
       </Layout>
