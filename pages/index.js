@@ -89,28 +89,18 @@ const Home = ({ token }) => {
           </motion.div>
           <br />
           <div className="Personal">
-            <div className="words1">
+            <h1>Schedyall for You</h1>
+            <br />
+            <br />
+          <div className="row">
+          <div className="column">
             <div className="add">
             <h2>Schedules &rarr;</h2>
             </div>
               <p>Save and build your schedule to be accessed from anywhere.</p>
-              <div className="add">
-            <h2>To do Lists &rarr;</h2>
-            </div>
-              <p>Create to do lists and prioritize what needs to be done.</p>
-              <div className="add">
-            <h2>Groups &rarr;</h2>
-            </div>
-              <p>
-                Have meetings or study with friends, classmates, or anyone else.
-              </p>
-              </div>
-            <div className="words2">
-              <h3>Schedyall For you</h3>
-              <p>With Schedyall, you can plan your days with ease and help get yourself organized for everything to come.</p>
-            </div>
-            <div className="schedules">
-            <div className="sched">
+          </div>
+          <div className="column">
+          <div className="sched1">
               <h4>MONDAY</h4>
             <a>Add to Monday &rarr;</a>
             <ol>
@@ -133,28 +123,34 @@ const Home = ({ token }) => {
                   </span>
                 </li>
             </ol>
-              </div>
-              <div className="sched">
+                </div>
+                <div className="sched1">
               <h4>TUESDAY</h4>
             <a>Add to Tuesday &rarr;</a>
             <ol>
                 <li className={styles.todo}>
-                  <span>Math @ 12:00</span>
+                  <span>English @ 11:00</span>
                   <span className={styles.edit}>
                       <a>Edit</a>
                   </span>
-                </li>
-                <li className={styles.todo}>
-                  <span>English @ 3:00</span>
+                  </li>
+                  <li className={styles.todo}>
+                  <span>History @ 12:45</span>
                   <span className={styles.edit}>
                       <a>Edit</a>
                   </span>
                   </li>
             </ol>
-              </div>
-              <div className="sched">
-              <h4>JACOB'S TODO LIST</h4>
-            <a>Add to your Todo List &rarr;</a>
+                </div>
+          </div>
+            </div>
+          <div className="row">
+              <div className="column">
+              <div className="sched2">
+              <h4>TODO LIST</h4>
+                  <a>Add to your Todo List &rarr;</a>
+                  <br />
+                  <br />
             <li className={styles.todo}>
                   <span>Call Mom :)</span>
                   <span className={styles.edit}>
@@ -180,23 +176,49 @@ const Home = ({ token }) => {
                   </span>
                 </li>
               </div>
-              <div className="sched">
-              <h4>JACOB'S GROUPS</h4>
-            <li className={styles.todo}>
-                  <span><a>MATH STUDY GROUP &rarr;</a></span>
-                </li>
-                <li className={styles.todo}>
-                  <span><a>WORK &rarr;</a></span>
-                </li>
-                <li className={styles.todo}>
-                  <span><a>FAMILY &rarr;</a></span>
-                </li>
+            </div>
+              <div className="column">
+              <div className="add">
+            <h2>&larr; To do Lists</h2>
+            </div>
+              <p>Create to do lists and prioritize what needs to be done.</p>
+            </div>
+            </div>
+            <div className="row">
+              <div className="column">
+              <div className="add">
+            <h2>Groups &rarr;</h2>
+            </div>
+              <p>
+                Have meetings or study with friends, classmates, or anyone else.
+              </p>
+            </div>
+              <div className="column">
+                <div className="sched2">
+                  <h3>JACOB'S GROUPS</h3>
+                </div>
+              <div className="sched3">
+                  <h4><li>Study Group</li></h4>
+                  <p>10+ Notifications</p>
+                  <p><b>Study Group&rarr;</b></p>
+                </div>
+                <div className="sched3">
+                  <h4><li>Work</li></h4>
+                  <p>5 Notifications</p>
+                  <p><b>Work&rarr;</b></p>
+                </div>
+                <div className="sched3">
+                  <h4><li>Family</li></h4>
+                  <p>2 Notifications</p>
+                  <p><b>Family&rarr;</b></p>
               </div>
             </div>
           </div>
+          </div>
           <div className="Business">
+          <h3>Schedyall for Business</h3>
               <img src="/X.png"/>
-            <p>Use the technology behind Iodefi intergrated with Schedyall to help you track logisitics, employees, order, and so much more.</p>
+            <p>Use the technology behind IODEFI intergrated with Schedyall to help you track logisitics, employees, order, and so much more.</p>
             <div className="add">
             <b>Learn more Here</b>
             </div>
@@ -225,7 +247,7 @@ const Home = ({ token }) => {
             margin-bottom: 2rem;
             padding: 1rem;
             float: center;
-            font-size: 80%;
+            font-size: 110%;
             font-family: inherit;
             border: 0;
             padding: 0;
@@ -251,13 +273,6 @@ const Home = ({ token }) => {
             display: flex;
             justify-content: center;
             align-items: center;
-          }
-
-          .schedules{
-            content: "";
-            display: table;
-            clear: both;
-            width: 100%;
           }
 
           footer img {
@@ -288,7 +303,7 @@ const Home = ({ token }) => {
           }
 
           h1 {
-            margin-bottom: 0;
+            margin-bottom: 1.5rem;
           }
 
           .Personal {
@@ -301,6 +316,55 @@ const Home = ({ token }) => {
             padding: 5%;
             width: 95%;
             color: white;
+          }
+
+          .sched1 {
+            float: left;
+            text-align: center;
+            font-size: 70%;
+            color: black;
+            background:white;
+            padding: 5px;
+            border-radius: 10px;
+            margin:2px;
+            width: 49%;
+          }
+
+          .sched2 {
+            float: left;
+            text-align: center;
+            font-size: 70%;
+            color: black;
+            background:white;
+            padding: 5px;
+            border-radius: 10px;
+            margin:2px;
+            width: 100%;
+          }
+
+          .sched3 {
+            float: left;
+            text-align: center;
+            font-size: 70%;
+            color: black;
+            background:white;
+            padding: 5px;
+            border-radius: 10px;
+            margin:2px;
+            width: 32.6%;
+          }
+
+          .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+          }
+          
+          .row:after {
+            content: "";
+            display: table;
+            clear: both;
+            margin-bottom: 4rem;
           }
 
           .Business {
@@ -328,43 +392,6 @@ const Home = ({ token }) => {
               width: 100%;
               flex-direction: column;
             }
-          }
-          .row:after {
-            content: "";
-            display: table;
-            clear: both;
-          }
-          .words{
-            float: left;
-            width: 50%;
-            padding: 10px;
-            text-align: center;
-          }
-          .words1{
-            float: left;
-            width: 50%;
-            padding: 10px;
-            text-align: center;
-          }
-          .words2{
-            float: left;
-            width: 50%;
-            padding: 10px;
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 8rem;
-          }
-
-          .sched {
-            float: left;
-            text-align: center;
-            font-size: 70%;
-            color: black;
-            background:white;
-            padding: 5px;
-            border-radius: 10px;
-            width: 24.6%;
-            margin:2px;
           }
         `}</style>
       </Layout>
