@@ -30,6 +30,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-hook-form": "^6.8.2",
+    "reactstrap": "^8.8.1",
     "swr": "^0.3.2"
   }
 }

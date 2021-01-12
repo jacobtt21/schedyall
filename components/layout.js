@@ -11,7 +11,7 @@ const Layout = ({ children }) => (
     />
     <Head>
       <title>Schedyall</title>
-      <link rel="icon" href="/favicon.JPG" />
+      <link rel="icon" href="/favicon.ico" />
     </Head>
     <Header />
 
